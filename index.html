@@ -14,13 +14,17 @@
       color: #e0e0e0;
       line-height: 1.6;
       min-height: 100vh;
+      padding-top: 14rem;          /* Aggressive top padding on body for breathing room */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       text-align: center;
       cursor: pointer;
     }
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+      padding: 4rem 2rem 8rem;     /* Additional internal top/bottom space */
       pointer-events: none;
     }
     h1 {
@@ -63,7 +67,7 @@
     }
     a:hover { color: #ffd700; border-bottom-color: #ffd700; }
     footer {
-      margin-top: 5rem;
+      margin-top: auto;
       padding: 2rem 0;
       font-size: 0.95rem;
       opacity: 0.6;
@@ -72,18 +76,19 @@
       text-align: center;
     }
 
-    /* Overlay - now with top padding */
+    /* Overlay - scrollable with top padding */
     #cover-overlay {
       display: none;
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.95);
       z-index: 1000;
-      align-items: flex-start; /* Align content to top of overlay */
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       flex-direction: column;
       cursor: pointer;
-      padding-top: 8rem; /* Top padding inside overlay — change this value to 10rem, 12rem, etc. */
+      overflow-y: auto;           /* Scroll if content overflows */
+      padding: 10rem 2rem 6rem;   /* Top padding for overlay content */
     }
     .covers-container {
       max-width: 95%;
@@ -101,20 +106,25 @@
       border-radius: 8px;
     }
     .close-text {
-      margin-top: 2rem;
+      margin: 3rem auto 1rem;
       font-size: 1.2rem;
       opacity: 0.8;
+      text-align: center;
+      pointer-events: none;
     }
     @media (max-width: 900px) {
       .covers-container { flex-direction: column; align-items: center; }
-      .cover-image { max-width: 80%; }
+      .cover-image { max-width: 90%; }
       h1 { font-size: 4rem; }
       .coming-soon { font-size: 2.2rem; }
-      #cover-overlay { padding-top: 6rem; } /* Less on mobile */
+      body { padding-top: 10rem; }
+      .container { padding: 6rem 1.5rem 6rem; }
+      #cover-overlay { padding: 8rem 1.5rem 6rem; }
     }
   </style>
 </head>
 <body onclick="toggleCovers(event)">
+
   <div class="container">
     <h1>THE EMBER</h1>
     <div class="coming-soon">COMING SOON</div>
@@ -129,13 +139,13 @@
     </p>
   </div>
 
-  <!-- Overlay -->
+  <!-- Overlay with front + back covers -->
   <div id="cover-overlay" onclick="toggleCovers(event)">
     <div class="covers-container">
       <img src="/cover-front.jpg" alt="Front Cover" class="cover-image">
       <img src="/cover-back.jpg" alt="Back Cover" class="cover-image">
     </div>
-    <a href="mailto:herb@schreib.net">herb@schreib.net</a>
+    <p class="close-text">Click anywhere to close</p>
   </div>
 
   <footer>
@@ -149,5 +159,6 @@
       overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
     }
   </script>
+
 </body>
 </html>
