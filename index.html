@@ -7,6 +7,10 @@
   <meta name="description" content="The Ember: How Ancient Minds Encoded Knowledge to Survive the End of Their World — by Herb Schreib. Coming soon."/>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
     body {
       font-family: 'Georgia', serif;
       background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
@@ -14,7 +18,7 @@
       color: #e0e0e0;
       line-height: 1.6;
       min-height: 100vh;
-      overflow: hidden; /* Prevent unwanted scroll */
+      padding-top: 20rem; /* Aggressive top padding on body */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,7 +28,7 @@
     }
     .container {
       max-width: 900px;
-      margin-top: 12rem; /* Main top spacing — adjust this value */
+      margin-top: 10rem; /* Additional top margin for container */
       padding: 2rem;
       pointer-events: none;
     }
@@ -108,29 +112,14 @@
       margin-top: 2rem;
       font-size: 1.2rem;
       opacity: 0.8;
-      pointer-events: none; /* Prevent accidental clicks on text */
-    }
-    .close-button {
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: rgba(255,140,0,0.2);
-      border: 1px solid #ff8c00;
-      color: #ff8c00;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 6px;
-      pointer-events: auto;
-    }
-    .close-button:hover {
-      background: rgba(255,140,0,0.4);
     }
     @media (max-width: 900px) {
       .covers-container { flex-direction: column; align-items: center; }
       .cover-image { max-width: 80%; }
       h1 { font-size: 4rem; }
       .coming-soon { font-size: 2.2rem; }
-      body { padding-top: 8rem; }
-      .container { margin-top: 8rem; padding: 2rem 1.5rem 6rem; }
+      body { padding-top: 12rem; } /* Adjusted for mobile */
+      .container { margin-top: 6rem; padding: 2rem 1.5rem 6rem; }
     }
   </style>
 </head>
@@ -157,7 +146,6 @@
       <img src="/cover-back.jpg" alt="Back Cover" class="cover-image">
     </div>
     <p class="close-text">Click anywhere to close</p>
-    <button class="close-button" onclick="document.getElementById('cover-overlay').style.display='none';">Close</button>
   </div>
 
   <footer>
@@ -166,10 +154,7 @@
 
   <script>
     function toggleCovers(e) {
-      // Ignore clicks on links or button
-      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
-        return;
-      }
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
       const overlay = document.getElementById('cover-overlay');
       overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
     }
