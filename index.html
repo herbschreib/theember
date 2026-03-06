@@ -72,17 +72,18 @@
       text-align: center;
     }
 
-    /* Overlay */
+    /* Overlay - now with top padding */
     #cover-overlay {
       display: none;
       position: fixed;
       inset: 0;
       background: rgba(0,0,0,0.95);
       z-index: 1000;
-      align-items: center;
+      align-items: flex-start; /* Align content to top of overlay */
       justify-content: center;
       flex-direction: column;
       cursor: pointer;
+      padding-top: 8rem; /* Top padding inside overlay — change this value to 10rem, 12rem, etc. */
     }
     .covers-container {
       max-width: 95%;
@@ -109,17 +110,11 @@
       .cover-image { max-width: 80%; }
       h1 { font-size: 4rem; }
       .coming-soon { font-size: 2.2rem; }
+      #cover-overlay { padding-top: 6rem; } /* Less on mobile */
     }
   </style>
 </head>
 <body onclick="toggleCovers(event)">
-  <!-- Forced top spacer with contact info -->
-  <div style="height: 15rem; min-height: 15rem; background: transparent;"></div>
-  <div style="text-align: center; color: #888; font-size: 1.1rem; padding: 1rem; max-width: 900px; margin: 0 auto;">
-    Contact Herb: <a href="mailto:herb@schreib.net">herb@schreib.net</a><br><br>
-    (Temporary spacer to force top padding — remove later)
-  </div>
-
   <div class="container">
     <h1>THE EMBER</h1>
     <div class="coming-soon">COMING SOON</div>
