@@ -17,14 +17,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* Align to top with padding */
       text-align: center;
-      cursor: pointer; /* indicates clickable */
+      cursor: pointer;
     }
     .container {
       max-width: 900px;
-      padding: 2rem;
-      pointer-events: none; /* so clicks pass through to body */
+      padding: 10vh 2rem 4rem; /* Extra top padding + bottom space */
+      pointer-events: none;
     }
     h1 {
       font-size: 5.5rem;
@@ -57,7 +57,7 @@
     .contact {
       font-size: 1.4rem;
       margin-top: 3rem;
-      pointer-events: auto; /* make email clickable */
+      pointer-events: auto;
     }
     a {
       color: #ff8c00;
@@ -66,16 +66,16 @@
     }
     a:hover { color: #ffd700; border-bottom-color: #ffd700; }
     footer {
-      margin-top: 5rem;
+      margin-top: auto;
+      padding: 2rem 0;
       font-size: 0.95rem;
       opacity: 0.6;
       border-top: 1px solid #222;
-      padding-top: 1.5rem;
       width: 100%;
       text-align: center;
     }
 
-    /* Overlay for covers */
+    /* Overlay */
     #cover-overlay {
       display: none;
       position: fixed;
@@ -88,7 +88,7 @@
       cursor: pointer;
     }
     .covers-container {
-      max-width: 90%;
+      max-width: 95%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -102,9 +102,16 @@
       box-shadow: 0 0 30px rgba(255,140,0,0.3);
       border-radius: 8px;
     }
+    .close-text {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
     @media (max-width: 900px) {
       .covers-container { flex-direction: column; align-items: center; }
       .cover-image { max-width: 80%; }
+      h1 { font-size: 4rem; }
+      .coming-soon { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -124,15 +131,13 @@
     </p>
   </div>
 
-  <!-- Hidden overlay with front + back covers -->
+  <!-- Overlay with front + back covers -->
   <div id="cover-overlay" onclick="toggleCovers(event)">
     <div class="covers-container">
       <img src="/cover-front.jpg" alt="Front Cover" class="cover-image">
       <img src="/cover-back.jpg" alt="Back Cover" class="cover-image">
     </div>
-    <p style="margin-top:2rem; font-size:1.2rem; opacity:0.8;">
-      Click anywhere to close
-    </p>
+    <p class="close-text">Click anywhere to close</p>
   </div>
 
   <footer>
@@ -141,9 +146,9 @@
 
   <script>
     function toggleCovers(e) {
-      // Prevent closing when clicking email link
-      if (e.target.tagName === 'A') return;
-      
+      // Prevent closing when clicking links (email)
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+
       const overlay = document.getElementById('cover-overlay');
       overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
     }
