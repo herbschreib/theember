@@ -14,16 +14,17 @@
       color: #e0e0e0;
       line-height: 1.6;
       min-height: 100vh;
+      padding-top: 6rem; /* Forces extra space at very top */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* Align to top with padding */
+      justify-content: flex-start;
       text-align: center;
       cursor: pointer;
     }
     .container {
       max-width: 900px;
-      padding: 10vh 2rem 4rem; /* Extra top padding + bottom space */
+      padding: 4rem 2rem 6rem; /* Increased top/bottom padding */
       pointer-events: none;
     }
     h1 {
@@ -112,6 +113,8 @@
       .cover-image { max-width: 80%; }
       h1 { font-size: 4rem; }
       .coming-soon { font-size: 2.2rem; }
+      body { padding-top: 4rem; } /* Slightly less on mobile */
+      .container { padding: 3rem 1.5rem 5rem; }
     }
   </style>
 </head>
@@ -131,7 +134,7 @@
     </p>
   </div>
 
-  <!-- Overlay with front + back covers -->
+  <!-- Overlay -->
   <div id="cover-overlay" onclick="toggleCovers(event)">
     <div class="covers-container">
       <img src="/cover-front.jpg" alt="Front Cover" class="cover-image">
@@ -146,9 +149,7 @@
 
   <script>
     function toggleCovers(e) {
-      // Prevent closing when clicking links (email)
       if (e.target.tagName === 'A' || e.target.closest('a')) return;
-
       const overlay = document.getElementById('cover-overlay');
       overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
     }
