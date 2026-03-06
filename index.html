@@ -3,46 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="/cover.jpg" type="image/jpeg">
   <title>The Ember — Coming Soon</title>
   <meta name="description" content="The Ember: How Ancient Minds Encoded Knowledge to Survive the End of Their World — by Herb Schreib. Coming soon."/>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Georgia', serif;
-      background: #0a0a0a;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                  url('/cover.jpg') center/cover no-repeat fixed;
       color: #e0e0e0;
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-    }
-    .hero {
-      flex: 1;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-              url('/cover.jpg') center/cover no-repeat fixed;
-      display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem;
+      cursor: pointer; /* indicates clickable */
     }
-    .content {
-      max-width: 800px;
-      padding: 0 1.5rem;
+    .container {
+      max-width: 900px;
+      padding: 2rem;
+      pointer-events: none; /* so clicks pass through to body */
     }
     h1 {
-      font-size: 4.5rem;
+      font-size: 5.5rem;
       font-weight: 900;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.25em;
+      color: #ff8c00;
+      text-shadow: 0 0 30px rgba(255,140,0,0.7);
       margin-bottom: 1.5rem;
-      color: #ff8c00; /* warm ember orange */
-      text-shadow: 0 0 20px rgba(255,140,0,0.6);
-    }
-    .subtitle {
-      font-size: 1.6rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
     }
     .coming-soon {
       font-size: 2.8rem;
@@ -52,50 +42,112 @@
       text-transform: uppercase;
       letter-spacing: 0.3em;
     }
+    .subtitle {
+      font-size: 1.7rem;
+      margin: 1rem 0 2rem;
+      max-width: 800px;
+      opacity: 0.95;
+    }
+    .author {
+      font-size: 1.8rem;
+      margin: 1.5rem 0 2.5rem;
+      font-style: italic;
+      opacity: 0.9;
+    }
     .contact {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-top: 3rem;
+      pointer-events: auto; /* make email clickable */
     }
     a {
       color: #ff8c00;
       text-decoration: none;
       border-bottom: 1px solid rgba(255,140,0,0.4);
-      transition: all 0.3s;
     }
-    a:hover {
-      color: #ffd700;
-      border-bottom-color: #ffd700;
-    }
+    a:hover { color: #ffd700; border-bottom-color: #ffd700; }
     footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
+      margin-top: 5rem;
+      font-size: 0.95rem;
       opacity: 0.6;
       border-top: 1px solid #222;
+      padding-top: 1.5rem;
+      width: 100%;
+      text-align: center;
     }
-    @media (max-width: 768px) {
-      h1 { font-size: 3.2rem; }
-      .coming-soon { font-size: 2rem; }
+
+    /* Overlay for covers */
+    #cover-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .covers-container {
+      max-width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .cover-image {
+      max-width: 45%;
+      height: auto;
+      border: 2px solid #444;
+      box-shadow: 0 0 30px rgba(255,140,0,0.3);
+      border-radius: 8px;
+    }
+    @media (max-width: 900px) {
+      .covers-container { flex-direction: column; align-items: center; }
+      .cover-image { max-width: 80%; }
     }
   </style>
 </head>
-<body>
-  <section class="hero">
-    <div class="content">
-      <h1>THE EMBER</h1>
-      <div class="coming-soon">Coming Soon</div>
-      <p class="subtitle">
-        How Ancient Minds Encoded Knowledge to Survive the End of Their World
-      </p>
-      <p class="contact">
-        For details, early access, or inquiries:<br>
-        <a href="mailto:herb@schreib.net">herb@schreib.net</a>
-      </p>
+<body onclick="toggleCovers(event)">
+
+  <div class="container">
+    <h1>THE EMBER</h1>
+    <div class="coming-soon">COMING SOON</div>
+    <p class="subtitle">
+      How Ancient Minds Encoded Knowledge<br>
+      to Survive the End of Their World
+    </p>
+    <p class="author">by Herb Schreib</p>
+    <p class="contact">
+      For details, early access, or inquiries:<br>
+      <a href="mailto:herb@schreib.net">herb@schreib.net</a>
+    </p>
+  </div>
+
+  <!-- Hidden overlay with front + back covers -->
+  <div id="cover-overlay" onclick="toggleCovers(event)">
+    <div class="covers-container">
+      <img src="/cover-front.jpg" alt="Front Cover" class="cover-image">
+      <img src="/cover-back.jpg" alt="Back Cover" class="cover-image">
     </div>
-  </section>
+    <p style="margin-top:2rem; font-size:1.2rem; opacity:0.8;">
+      Click anywhere to close
+    </p>
+  </div>
 
   <footer>
-    &copy; 2026 Herb Schreib — All rights reserved
+    © 2026 Herb Schreib — All rights reserved
   </footer>
+
+  <script>
+    function toggleCovers(e) {
+      // Prevent closing when clicking email link
+      if (e.target.tagName === 'A') return;
+      
+      const overlay = document.getElementById('cover-overlay');
+      overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
 </body>
 </html>
