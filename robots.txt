@@ -1,0 +1,5 @@
+# robots.txt for theemberbook.com
+User-agent: *
+Allow: /
+
+Sitemap: https://theemberbook.com/sitemap.xml
