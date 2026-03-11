@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Ember | A Story of the First Builders</title>
+  
+  <!-- Favicon (your current naming convention) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta name="description" content="The Ember: How Ancient Minds Encoded Knowledge to Survive the End of Their World — by Herb Schreib. Now available on Amazon."/>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                  url('/cover.jpg') center/cover no-repeat fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-top: 12rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      padding: 4rem 2rem 8rem;
+      pointer-events: none;
+    }
+    h1 {
+      font-size: 5.5rem;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      color: #ff8c00;
+      text-shadow: 0 0 30px rgba(255,140,0,0.7);
+      margin-bottom: 1.5rem;
+    }
+    .now-available {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #ff8c00;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+    }
+    .subtitle {
+      font-size: 1.7rem;
+      margin: 1rem 0 2rem;
+      max-width: 800px;
+      opacity: 0.95;
+    }
+    .author {
+      font-size: 1.8rem;
+      margin: 1.5rem 0 2.5rem;
+      font-style: italic;
+      opacity: 0.9;
+    }
+    .buy-button {
+      display: inline-block;
+      background: #ff8c00;
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem 3rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .buy-button:hover {
+      background: #ffd700;
+      transform: scale(1.05);
+    }
+    .contact {
+      font-size: 1.4rem;
+      margin-top: 3rem;
+      pointer-events: auto;
+    }
+    a { color: #ff8c00; text-decoration: none; }
+    a:hover { color: #ffd700; }
+
+    /* Overlay - covers */
+    #cover-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 4rem 2rem 6rem;
+    }
+    .covers-container {
+      max-width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .cover-image {
+      max-width: 45%;
+      height: auto;
+      border: 2px solid #444;
+      box-shadow: 0 0 30px rgba(255,140,0,0.3);
+      border-radius: 8px;
+    }
+    .overlay-contact {
+      margin: 3rem auto 2rem;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body onclick="toggleCovers(event)">
+  <div class="container">
+    <h1>THE EMBER</h1>
+    <div class="now-available">NOW AVAILABLE</div>
+    <p class="subtitle">
+      How Ancient Minds Encoded Knowledge<br>
+      to Survive the End of Their World
+    </p>
+    <p class="author">by Herb Schreib</p>
+    
+    <a href="https://www.amazon.com/dp/YOUR-ASIN-HERE" 
+       target="_blank" 
+       class="buy-button">
+      Buy on Amazon 📖
+    </a>
+
+    <p class="contact">
+      For details or inquiries:<br>
+      <a href="mailto:herb@schreib.net">herb@schreib.net</a>
+    </p>
+  </div>
+
+  <!-- Overlay - front & back covers -->
+  <div id="cover-overlay" onclick="toggleCovers(event)">
+    <div class="covers-container">
+      <img src="/cover-front.jpg" alt="Front Cover" class="cover-image">
+      <img src="/cover-back.jpg" alt="Back Cover" class="cover-image">
+    </div>
+    <div class="overlay-contact">
+      For details or inquiries: <a href="mailto:herb@schreib.net">herb@schreib.net</a>
+    </div>
+  </div>
+
+  <footer style="margin-top:auto; padding:2rem 0; font-size:0.95rem; opacity:0.6; border-top:1px solid #222; width:100%; text-align:center;">
+    © 2026 Herb Schreib — All rights reserved
+  </footer>
+
+  <script>
+    function toggleCovers(e) {
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      const overlay = document.getElementById('cover-overlay');
+      overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
