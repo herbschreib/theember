@@ -33,7 +33,6 @@
   </style>
 </head>
 <body class="bg-[#0A0A0F] text-white overflow-x-hidden">
-
   <!-- NAVBAR -->
   <nav class="border-b border-white/10 bg-black/70 backdrop-blur-md fixed w-full z-50">
     <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -78,19 +77,7 @@
   <section id="review" class="py-20 bg-[#111113]">
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-semibold tracking-tight text-center mb-12 text-ember-orange">2026 Annual Star Review</h2>
-
       <div class="space-y-16">
-
-        <!-- UPGRADES -->
-        <div>
-          <h3 class="text-xl uppercase tracking-widest text-emerald-400 mb-6">Upgrades ★ → ★★ or ★★★</h3>
-          <ul class="space-y-8 text-lg">
-            <li><strong>Taş Tepeler network</strong> — Geographic scope claim on p. 214 upgraded to ★★★ (new 2025–2026 papers confirm ritual coordination across 12+ sites).</li>
-            <li><strong>Neanderthal symbolic cognition</strong> — Symbolic behavior evidence on p. 87 upgraded to ★★ (pigment + burial data now peer-reviewed).</li>
-            <li><strong>Wolf domestication timeline</strong> — Moved earlier by ~5,000 years on p. 132 → ★★ (genomic re-analysis 2026).</li>
-          </ul>
-        </div>
-
         <!-- LATEST DISCOVERIES -->
         <section class="py-16" id="discoveries">
           <div class="max-w-6xl mx-auto px-6">
@@ -98,15 +85,6 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="discoveries-grid"></div>
           </div>
         </section>
-
-        <!-- DOWNGRADES -->
-        <div>
-          <h3 class="text-xl uppercase tracking-widest text-rose-400 mb-6">Downgrades ★★ → ★</h3>
-          <ul class="space-y-8 text-lg">
-            <li><strong>Some Book 2 synthesis claims</strong> on early Göbekli Tepe astronomy (p. 189) downgraded to ★ pending new excavation data.</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </section>
@@ -114,41 +92,46 @@
   <script>
     const discoveries = [
       {
+        title: "Barnham Fire (400,000 years ago)",
+        subtitle: "Davis et al. (2026, Nature)",
+        text: "Earliest clear evidence of deliberate, sustained fire-making in Britain. Non-local pyrite transported 20–40 km, repeated >700 °C localized hearths, and heat-cracked flints prove controlled fire use 360,000 years before the Ember era. The literal ember was already being carried hand-to-hand across deep time.",
+        rating: "★★★",
+        link: "https://www.theaisymposium.net/public/discoveries2-barnham-fire"
+      },
+      {
+        title: "Neanderthal Knowledge Survived Absorption (~40,000 ya)",
+        subtitle: "Platt & Tishkoff (2026, Science)",
+        text: "Strongly directional interbreeding: male Neanderthals joined sapiens groups far more often than the reverse. Neanderthal males brought embodied knowledge (fire-making, tool craft, landscape memory) into sapiens bands through kinship. The mechanism that let Kel’s knowledge cross the species boundary.",
+        rating: "★★★",
+        link: "https://www.theaisymposium.net/public/discoveries4-neanderthal-absorption"
+      },
+      {
+        title: "Aurignacian Geometric Notation (~40,000 BP)",
+        subtitle: "Bentz & Dutkiewicz (2026, PNAS)",
+        text: "Over 3,000 geometric signs on 260 portable ivory, bone, and antler artifacts from Swabian Jura caves. 22 stable core signs with rule-governed placement (dots on humans/felines, crosses on mammoths/horses) persisted for 10,000 years. Notation, not decoration — the first external storage of symbolic information.",
+        rating: "★★★",
+        link: "https://www.theaisymposium.net/public/discoveries3-aurignacian-notation"
+      },
+      {
+        title: "Oldest Known Dog: The Wolf Decided (~15,800 ya)",
+        subtitle: "Marsh & Bergström (2026, Nature)",
+        text: "15,800-year-old puppy from Pınarbaşı, genetically distinct from wolves by ~18,000 ya, fed fish by humans, buried with deliberate care alongside them. Dogs spread with hunter-gatherers before agriculture; farmers adopted existing lines. The moment “the wolf is deciding” became “the wolf decided.”",
+        rating: "★★★",
+        link: "https://www.theaisymposium.net/public/discoveries5-oldest-dog"
+      },
+      {
         title: "Natufian Clay Bead Cache (12,000–15,000 years ago)",
-        subtitle: "Davin et al. (2026), Science Advances",
-        text: "142 clay beads from four sites in northern Israel. Fingerprints of children and adults prove multi-generational craft transmission. Consistent morphology across 200+ km and 3,000 years demonstrates shared symbolic language without writing or institutions. Plant-shaped motifs reference species later domesticated. The 50–150 year gap to Göbekli Tepe, bridged by documented obsidian trade networks, suggests these household practices scaled into monumental encoding. Knowledge survived in hands, not scripts.",
+        subtitle: "Davin et al. (2026, Science Advances)",
+        text: "142 clay beads from four sites in northern Israel. Fingerprints of children and adults prove multi-generational craft transmission. Consistent morphology across 200+ km demonstrates shared symbolic language without writing. Plant-shaped motifs reference species later domesticated. Knowledge survived in hands, not scripts.",
         rating: "★★★",
         link: "https://www.theaisymposium.net/public/discoveries1-natufian-clay-beads"
       },
       {
-        title: "Aurignacian Geometric Notation Confirmed (~40,000 BP)",
-        subtitle: "Bentz & Dutkiewicz (PNAS)",
-        text: "Prove the impulse to make structured marks is 35,000 years older than we thought.",
-        rating: "★★★"
-      },
-      {
-        title: "Neanderthal Knowledge Survived Absorption",
-        subtitle: "Platt, Harris & Tishkoff (Science, 2026)",
-        text: "Demonstrated that Neanderthal-human interbreeding was strongly directional...",
-        rating: "★★★"
-      },
-      {
-        title: "Ohalo II (23,000 years ago) – The Ember Was Already Burning in the Ice Age",
-        subtitle: "Sea of Galilee, Israel",
-        text: "Use-wear analysis proves people were already harvesting wild cereals with composite sickles and grinding them into flour during the Last Glacial Maximum.",
-        rating: "★★★"
-      },
-      {
-        title: "Şika Rika 5 (12,000–10,000 years ago) – The Missing Link Before the Stones",
-        subtitle: "Mardin province, Turkey",
-        text: "First Epipaleolithic settlement outside the river valleys with bedrock mortars and symbolic objects — the direct precursor to the Taş Tepeler builders.",
-        rating: "★★★"
-      },
-      {
-        title: "Yunxian 2 / Dragon Man Skull – Redundant Embers Across a Million-Year Runway",
-        subtitle: "Chinese Academy of Sciences, 2025",
-        text: "The Yunxian 2 skull shows that large-brained hominins existed in East Asia a million years ago — but large brains alone didn't produce sustained symbolic culture.",
-        rating: "★★★ / ★★ / ★"
+        title: "Natufian Bone Flutes: Sound as Knowledge (~12,000 ya)",
+        subtitle: "Davin et al. (2023, Nature Scientific Reports)",
+        text: "Seven bone aerophones from Eynan-Mallaha — oldest known bird-call imitators worldwide. Made from teal and coot wing bones, they mimic kestrel and sparrowhawk calls. Same settlement and same lead author as the clay beads. Same people encoding knowledge in two media: what you see and what you hear.",
+        rating: "★★★",
+        link: "https://www.theaisymposium.net/public/discoveries6-natufian-bone-flutes"
       }
     ];
 
@@ -159,18 +142,12 @@
       card.innerHTML = `
         <div class="text-xs text-gray-500 mb-3">March 2026</div>
         <h3 class="text-xl font-medium mb-3 group-hover:text-ember-orange transition">${d.title}</h3>
-        <p class="text-gray-400 text-sm">${d.text}</p>
-        ${d.link ? `<a href="${d.link}" target="_blank" class="text-ember-orange text-sm mt-6 inline-block">Read the Symposium session →</a>` : `<a href="#" class="text-ember-orange text-sm mt-6 inline-block">Read the Symposium session →</a>`}
+        <p class="text-gray-400 text-sm mb-4">${d.text}</p>
+        <a href="${d.link}" target="_blank" class="text-ember-orange text-sm inline-block">Read the Symposium session →</a>
       `;
       grid.appendChild(card);
     });
   </script>
-
-  <!-- HOLDS -->
-  <div>
-    <h3 class="text-xl uppercase tracking-widest text-amber-400 mb-6">Holds (no change)</h3>
-    <p class="text-lg">Finsler gravity / q-desic equation thesis in Book 3 (p. 312) remains ★★★ — digital Phoenician vulnerability still strongly supported by current events.</p>
-  </div>
 
   <!-- LIVE SYMPOSIUM SESSIONS -->
   <section class="py-16 bg-black/60" id="sessions">
@@ -198,6 +175,5 @@
       <p class="mt-3">Built in conversation with Claude & Grok • <a href="mailto:info@humansidetechnologies.com" class="hover:text-white">info@humansidetechnologies.com</a></p>
     </div>
   </footer>
-
 </body>
 </html>
