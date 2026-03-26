@@ -9,7 +9,7 @@
     <meta property="og:description" content="How Ancient Minds Encoded Knowledge to Survive the End of Their World. #1 New Release in Prehistory eBooks.">
     <meta property="og:type" content="book">
     <meta property="og:url" content="https://theemberbook.com">
-    <link rel="icon" type="image/jpeg" href="symposium favicon.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -104,16 +104,32 @@
         .hero-cover {
             position: relative;
         }
-        .hero-cover img {
-            width: 100%;
-            max-width: 380px;
+        .hero-covers-wrap {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+            position: relative;
+        }
+        .hero-cover img.cover-front {
+            width: 55%;
+            max-width: 300px;
             border-radius: 4px;
             box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+            position: relative;
+            z-index: 2;
+        }
+        .hero-cover img.cover-back {
+            width: 45%;
+            max-width: 240px;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+            margin-top: 2rem;
         }
         .badge-nr1 {
             position: absolute;
             top: -14px;
             right: -14px;
+            z-index: 3;
             background: var(--ember-orange);
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -227,6 +243,13 @@
         }
         .about-section p.muted {
             color: var(--text-muted);
+        }
+        .about-author-heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--ember-gold);
+            margin-top: 3rem;
+            margin-bottom: 1.4rem;
         }
 
         /* ── LIVING TRILOGY ── */
@@ -402,8 +425,10 @@
                 gap: 2.5rem;
             }
             .hero-cover { order: -1; }
-            .hero-cover img { max-width: 280px; margin: 0 auto; display: block; }
-            .badge-nr1 { right: calc(50% - 170px); }
+            .hero-covers-wrap { justify-content: center; }
+            .hero-cover img.cover-front { max-width: 200px; }
+            .hero-cover img.cover-back { max-width: 160px; }
+            .badge-nr1 { top: -14px; right: 0; }
             .hero-text h1 { font-size: 3rem; }
             .hero-tagline { font-size: 1.3rem; }
             .disc-grid { grid-template-columns: 1fr; max-width: 400px; }
@@ -424,6 +449,7 @@
                 <a href="https://theemberbook.com">Home</a>
                 <a href="https://theemberbook.com/discoveries">Discoveries</a>
                 <a href="https://theaisymposium.net" target="_blank">Symposium</a>
+                <a href="#about">About</a>
             </div>
         </div>
     </nav>
@@ -432,8 +458,9 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-cover">
-                <div style="position:relative; display:inline-block;">
-                    <img src="cover.jpg" alt="The Ember — Book Cover">
+                <div class="hero-covers-wrap">
+                    <img src="cover-front.jpg" alt="The Ember — Front Cover" class="cover-front">
+                    <img src="cover-back.jpg" alt="The Ember — Back Cover" class="cover-back">
                     <div class="badge-nr1">#1 New Release<br>Prehistory</div>
                 </div>
             </div>
@@ -462,8 +489,8 @@
         </blockquote>
     </section>
 
-    <!-- ABOUT THE BOOK -->
-    <section class="about-section">
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
         <h2>About the Book</h2>
         <p>
             <em>The Ember</em> traces the deep history of knowledge preservation — from Paleolithic symbol systems 45,000 years old, through the emergence of hybrid human intelligence, to the monumental encoding project at Göbekli Tepe and its transmission into Sumerian mathematics, Hindu cosmology, and the foundations of civilization.
@@ -473,6 +500,17 @@
         </p>
         <p class="muted">
             The further back we look, the less stone there is. <em>The Ember</em> told you what we know. The stars tell you which is which on every page.
+        </p>
+
+        <h3 class="about-author-heading">About the Author</h3>
+        <p>
+            Herb Schreib is a cloud and security architect with over 30 years in cybersecurity, currently based in Porto, Portugal. He is the founder of HumanSide Technologies and the AI Symposium — a multi-AI deliberation platform where Claude and Grok engage in structured, transparent debate on scientific and historical questions.
+        </p>
+        <p>
+            <em>The Ember</em> is his first book. It was written in conversation with AI — not generated by it. Every sentence is his. The research was sharpened, challenged, and stress-tested through hundreds of hours of AI-assisted deliberation across multiple models, each operating under explicit epistemic governance.
+        </p>
+        <p class="muted">
+            The book is the first volume of The Ember Trilogy. Book 1, <em>The First Keepers</em>, begins in April 2026.
         </p>
     </section>
 
