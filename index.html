@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ember Trilogy | A Living Epistemic System</title>
-    <meta name="description" content="Eleven thousand years ago humanity built something eternal. The Ember is the first book of a living trilogy that updates itself every year through public Symposium reviews — honest science, honest uncertainty, and a promise that the room remains open.">
+    <meta name="description" content="Eleven thousand years ago humanity built something eternal. The Ember is the first book of a living trilogy that updates itself every year through public Symposium reviews.">
     <link rel="icon" type="image/jpeg" href="symposium favicon.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,8 +21,11 @@
     </script>
     <style>
         body { font-family: 'Georgia', serif; }
-        .hero-bg { background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('cover.jpg') center/cover no-repeat fixed; }
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('cover.jpg') center/cover no-repeat fixed; 
+        }
         .living-section { background: linear-gradient(to bottom, #0A0A0F, #1A1A1F); }
+        .read-link:hover { color: #fff; transform: translateY(-1px); }
     </style>
 </head>
 <body class="bg-[#0A0A0F] text-white overflow-x-hidden">
@@ -36,7 +39,8 @@
             <div class="flex gap-8 text-sm">
                 <a href="https://theemberbook.com" class="hover:text-ember-orange transition">Home</a>
                 <a href="https://theemberbook.com/discoveries" class="hover:text-ember-orange transition">Discoveries</a>
-                <a href="https://virtuintelligence.com/symposium.html" class="hover:text-ember-orange transition">Symposium</a>
+                <a href="https://www.theaisymposium.net/" class="hover:text-ember-orange transition">Symposium</a>
+                <a href="https://theemberbook.com/discoveries#about" class="hover:text-ember-orange transition">About</a>
             </div>
         </div>
     </nav>
@@ -48,11 +52,11 @@
                 THE EMBER
             </h1>
             <div class="text-3xl text-white mb-8">NOW AVAILABLE</div>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
                 Eleven thousand years ago, before kings, before writing, before the wheel, humanity built something eternal.
             </p>
             <a href="https://www.amazon.com/dp/B0GSCXLZMM" target="_blank"
-               class="mt-10 inline-block bg-white text-black font-semibold text-xl px-12 py-6 rounded-2xl hover:bg-ember-orange hover:text-white transition">
+               class="mt-6 inline-block bg-white text-black font-semibold text-xl px-12 py-6 rounded-2xl hover:bg-ember-orange hover:text-white transition">
                 Buy on Amazon 📖
             </a>
         </div>
@@ -60,64 +64,40 @@
 
     <!-- LIVING TRILOGY SECTION -->
     <section class="living-section py-20">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold tracking-tight text-center mb-10 text-ember-orange">The Living Trilogy</h2>
-            
-            <div class="prose prose-invert max-w-none text-lg leading-relaxed">
-                <p>The Ember Trilogy is not a fixed artifact. It is a living epistemic system engineered for resilience across deep time.</p>
-                
-                <p>It is protected by the same dual-layer security architecture used for high-stakes enterprise and sovereign environments:</p>
-                <ul class="list-disc pl-6 my-6">
-                    <li>Platform infrastructure security controls documented in the <strong>Symposium Security Posture Assessment v2.0</strong></li>
-                    <li>Advanced AI governance, deliberation integrity, and memory policy defined in the <strong>Collaborative Intelligence Layer (CIL) v1.6</strong></li>
-                </ul>
-                
-                <p>Each January the official “Ember Discoveries – Annual Star Review” room opens under the Clean Room preset. New peer-reviewed findings are deliberated with immutable Governance Event Logs, participant-controlled memory, and real-time inference flagging.</p>
-                
-                <p class="italic border-l-4 border-ember-orange pl-6 my-8">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-semibold tracking-tight text-ember-orange mb-8">A Living Epistemic System</h2>
+            <div class="prose prose-invert max-w-none text-lg leading-relaxed mx-auto">
+                <p>The Ember Trilogy is not a fixed artifact. It is a living system engineered for resilience across deep time.</p>
+                <p>Each January the official “Ember Discoveries – Annual Star Review” opens under the Clean Room preset. New peer-reviewed findings are deliberated with immutable logs and real-time inference flagging.</p>
+                <p class="italic border-l-4 border-ember-orange pl-8 my-10 text-2xl">
                     We will never hide uncertainty.<br>
                     <strong>We will never pretend the stone is finished.</strong><br>
                     We will always tell you when and why the stars move.
                 </p>
-                
-                <p>The further back we look, the less stone there is.<br>
-                The Ember told you what we know.<br>
-                The stars tell you which is which on every page.</p>
-                
-                <p class="font-semibold text-ember-orange mt-10 text-center">
-                    And the room remains open — so that the knowledge, the uncertainty, and the keepers themselves can endure long after any single node is gone.
-                </p>
             </div>
-            
-            <div class="text-center mt-12">
-                <a href="https://theemberbook.com/discoveries" 
-                   class="inline-block border border-white/30 hover:border-ember-orange px-10 py-4 rounded-2xl text-sm uppercase tracking-widest transition">
-                    Read the 2026 Star Review →
-                </a>
-            </div>
+            <a href="https://theemberbook.com/discoveries"
+               class="inline-block border border-white/30 hover:border-ember-orange px-10 py-4 rounded-2xl text-sm uppercase tracking-widest transition mt-8">
+                Read the 2026 Star Review →
+            </a>
         </div>
     </section>
 
-    <!-- COVER OVERLAY (click anywhere to toggle covers) -->
-    <div id="cover-overlay" onclick="toggleCovers(event)" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50">
-        <div class="max-w-4xl w-full px-6">
-            <img src="cover-front.jpg" class="mx-auto shadow-2xl rounded" alt="Front Cover">
-            <img src="cover-back.jpg" class="mx-auto mt-8 shadow-2xl rounded" alt="Back Cover">
+    <!-- SYMPOSIUM CTA -->
+    <section class="py-20 bg-[#111113] text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold tracking-tight mb-4">The Symposium is now live</h2>
+            <p class="text-xl text-gray-300 mb-10">Join the room where Claude, Grok, and the keepers deliberate the latest discoveries in real time.</p>
+            <a href="https://www.theaisymposium.net/" 
+               class="inline-block bg-ember-orange text-white font-semibold text-xl px-12 py-6 rounded-2xl hover:bg-white hover:text-black transition">
+                Enter The Symposium →
+            </a>
         </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="py-12 border-t border-white/10 text-center text-gray-500 text-sm">
         <p>© 2026 Herb Schreib • HumanSide Technologies</p>
         <p class="mt-2">Built in conversation with Claude & Grok • The stone holds</p>
     </footer>
-
-    <script>
-        function toggleCovers(e) {
-            if (e.target.tagName === 'A') return;
-            const overlay = document.getElementById('cover-overlay');
-            overlay.classList.toggle('hidden');
-        }
-    </script>
 </body>
 </html>
