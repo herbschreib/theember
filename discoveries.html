@@ -91,7 +91,6 @@
     <div class="max-w-4xl mx-auto px-6">
       <h2 class="text-4xl font-semibold tracking-tight text-center mb-12 text-ember-orange">2026 Annual Star Review</h2>
       <div class="space-y-16">
-        <!-- LATEST DISCOVERIES -->
         <section class="py-16" id="discoveries">
           <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-4xl font-semibold mb-10 text-center">Latest Discoveries</h2>
@@ -104,48 +103,12 @@
 
   <script>
     const discoveries = [
-      {
-        title: "Barnham Fire (400,000 years ago)",
-        subtitle: "Davis et al. (2026, Nature)",
-        text: "Earliest clear evidence of deliberate, sustained fire-making in Britain. Non-local pyrite transported 20–40 km, repeated >700 °C localized hearths, and heat-cracked flints prove controlled fire use 360,000 years before the Ember era. The literal ember was already being carried hand-to-hand across deep time.",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries2-barnham-fire"
-      },
-      {
-        title: "Neanderthal Knowledge Survived Absorption (~40,000 ya)",
-        subtitle: "Platt & Tishkoff (2026, Science)",
-        text: "Strongly directional interbreeding: male Neanderthals joined sapiens groups far more often than the reverse. Neanderthal males brought embodied knowledge (fire-making, tool craft, landscape memory) into sapiens bands through kinship.",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries4-neanderthal-absorption"
-      },
-      {
-        title: "Aurignacian Geometric Notation (~40,000 BP)",
-        subtitle: "Bentz & Dutkiewicz (2026, PNAS)",
-        text: "Over 3,000 geometric signs on 260 portable ivory, bone, and antler artifacts from Swabian Jura caves. 22 stable core signs with rule-governed placement persisted for 10,000 years. Notation, not decoration — the first external storage of symbolic information.",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries3-aurignacian-notation"
-      },
-      {
-        title: "Oldest Known Dog: The Wolf Decided (~15,800 ya)",
-        subtitle: "Marsh & Bergström (2026, Nature)",
-        text: "15,800-year-old puppy from Pınarbaşı, genetically distinct from wolves by ~18,000 ya, fed fish by humans, buried with deliberate care. Dogs spread with hunter-gatherers before agriculture; farmers adopted existing lines. The moment “the wolf is deciding” became “the wolf decided.”",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries5-oldest-dog"
-      },
-      {
-        title: "Natufian Clay Bead Cache (12,000–15,000 years ago)",
-        subtitle: "Davin et al. (2026, Science Advances)",
-        text: "142 clay beads from four sites in northern Israel. Fingerprints of children and adults prove multi-generational craft transmission. Consistent morphology across 200+ km demonstrates shared symbolic language without writing or institutions.",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries1-natufian-clay-beads"
-      },
-      {
-        title: "Natufian Bone Flutes: Sound as Knowledge (~12,000 ya)",
-        subtitle: "Davin et al. (2023, Nature Scientific Reports)",
-        text: "Seven bone aerophones from Eynan-Mallaha — the oldest known bird-call imitators worldwide. Same settlement as the clay beads. Same people encoding knowledge in two media: what you see and what you hear.",
-        rating: "★★★",
-        link: "https://www.theaisymposium.net/public/discoveries6-natufian-bone-flutes"
-      },
+      { title: "Barnham Fire (400,000 years ago)", subtitle: "Davis et al. (2026, Nature)", text: "Earliest clear evidence of deliberate, sustained fire-making in Britain. Non-local pyrite transported 20–40 km, repeated >700 °C localized hearths, and heat-cracked flints prove controlled fire use 360,000 years before the Ember era. The literal ember was already being carried hand-to-hand across deep time.", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries2-barnham-fire" },
+      { title: "Neanderthal Knowledge Survived Absorption (~40,000 ya)", subtitle: "Platt & Tishkoff (2026, Science)", text: "Strongly directional interbreeding: male Neanderthals joined sapiens groups far more often than the reverse. Neanderthal males brought embodied knowledge (fire-making, tool craft, landscape memory) into sapiens bands through kinship.", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries4-neanderthal-absorption" },
+      { title: "Aurignacian Geometric Notation (~40,000 BP)", subtitle: "Bentz & Dutkiewicz (2026, PNAS)", text: "Over 3,000 geometric signs on 260 portable ivory, bone, and antler artifacts from Swabian Jura caves. 22 stable core signs with rule-governed placement persisted for 10,000 years. Notation, not decoration — the first external storage of symbolic information.", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries3-aurignacian-notation" },
+      { title: "Oldest Known Dog: The Wolf Decided (~15,800 ya)", subtitle: "Marsh & Bergström (2026, Nature)", text: "15,800-year-old puppy from Pınarbaşı, genetically distinct from wolves by ~18,000 ya, fed fish by humans, buried with deliberate care. Dogs spread with hunter-gatherers before agriculture; farmers adopted existing lines. The moment “the wolf is deciding” became “the wolf decided.”", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries5-oldest-dog" },
+      { title: "Natufian Clay Bead Cache (12,000–15,000 years ago)", subtitle: "Davin et al. (2026, Science Advances)", text: "142 clay beads from four sites in northern Israel. Fingerprints of children and adults prove multi-generational craft transmission. Consistent morphology across 200+ km demonstrates shared symbolic language without writing or institutions.", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries1-natufian-clay-beads" },
+      { title: "Natufian Bone Flutes: Sound as Knowledge (~12,000 ya)", subtitle: "Davin et al. (2023, Nature Scientific Reports)", text: "Seven bone aerophones from Eynan-Mallaha — the oldest known bird-call imitators worldwide. Same settlement as the clay beads. Same people encoding knowledge in two media: what you see and what you hear.", rating: "★★★", link: "https://www.theaisymposium.net/public/discoveries6-natufian-bone-flutes" },
       {
         title: "Discovery #7 — Coming Soon",
         text: "The next peer-reviewed finding is already in the pipeline. Want to be in the room when Grok, Claude, and the keepers deliberate it live?",
@@ -167,23 +130,43 @@
     });
   </script>
 
-  <!-- ABOUT THE AUTHOR (center justified + larger font) -->
+  <!-- ABOUT THE AUTHOR (image on left + your exact text, centered) -->
   <section id="about" class="py-20 bg-[#0A0A0F]">
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-semibold tracking-tight text-center mb-12 text-ember-orange">About the Author</h2>
-      <div class="prose prose-invert text-xl leading-relaxed text-center max-w-3xl mx-auto">
-        <p>Herb Schreib graduated from The University of Texas at Austin with a Master degree in the 1990s and has spent the last thirty years as a cloud and security architect, protecting sensitive information for &amp; from enterprises and nation states.</p>
-        
-        <p>That lifelong work of safeguarding what matters most became the unexpected bridge to <strong>The Ember</strong>: a story about the first humans who fought to keep knowledge alive across generations.</p>
-        
-        <p>The book grew from a research obsession with Göbekli Tepe and the Taş Tepeler sites that included a visit to the Gebaute Gemeinschaft exhibition at the James-Simon-Galerie in Berlin.</p>
-        
-        <p>The Ember was written in collaboration with Claude and Grok, two frontier AI systems… using a deliberation method that became the foundation for the Symposium AI Lab (theaisymposium.net).</p>
-        
-        <p>Herb lives between Malta and Portugal with his wife Yuliya, who walked 2,000 kilometers across Europe on her own pilgrimage and understands why some people need to go see the stones for themselves. Herb has two brilliant sons, Herbert and James, attending university and already preparing for the next discoveries . . .</p>
-        
-        <p class="mt-10 font-semibold text-ember-orange">Contact the Author: <a href="mailto:herb@humansidetechnologies.com" class="hover:underline">herb@humansidetechnologies.com</a></p>
+      <div class="grid md:grid-cols-12 gap-12 items-start">
+        <div class="md:col-span-5">
+          <img src="https://theemberbook.com/amazonimg.jpg" 
+               alt="Herb Schreib at the Gebaute Gemeinschaft exhibition, Berlin" 
+               class="rounded-3xl shadow-2xl w-full">
+        </div>
+        <div class="md:col-span-7 prose prose-invert text-xl leading-relaxed text-center md:text-left">
+          <p>Herb Schreib graduated from The University of Texas at Austin with a Master degree in the 1990s and has spent the last thirty years as a cloud and security architect, protecting sensitive information for &amp; from enterprises and nation states.</p>
+          <p>That lifelong work of safeguarding what matters most became the unexpected bridge to <strong>The Ember</strong>: a story about the first humans who fought to keep knowledge alive across generations.</p>
+          <p>The book grew from a research obsession with Göbekli Tepe and the Taş Tepeler sites that included a visit to the Gebaute Gemeinschaft exhibition at the James-Simon-Galerie in Berlin.</p>
+          <p>The Ember was written in collaboration with Claude and Grok, two frontier AI systems… using a deliberation method that became the foundation for the Symposium AI Lab (theaisymposium.net).</p>
+          <p>Herb lives between Malta and Portugal with his wife Yuliya, who walked 2,000 kilometers across Europe on her own pilgrimage and understands why some people need to go see the stones for themselves. Herb has two brilliant sons, Herbert and James, attending university and already preparing for the next discoveries . . .</p>
+          <p class="mt-10 font-semibold text-ember-orange">Contact the Author: <a href="mailto:herb@humansidetechnologies.com" class="hover:underline">herb@humansidetechnologies.com</a></p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST (exact code you provided) -->
+  <section id="waitlist" class="py-20 bg-gradient-to-b from-transparent via-[#00D4FF]/10 to-transparent">
+    <div class="max-w-md mx-auto px-6 text-center">
+      <h2 class="text-4xl font-semibold mb-4">Be among the first</h2>
+      <p class="text-gray-400 mb-8">Early access to Every Historic Announcement and AI Symposium Analysis.</p>
+      <form id="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSetTXwrvUBZTvqpW9fXb3oigCTw4NoxU2Kq4n7pqbkpX9iaDQ/formResponse" method="POST" target="hidden_iframe" onsubmit="handleWaitlist()">
+        <div class="flex flex-col sm:flex-row gap-3 mb-4">
+          <input type="email" name="entry.386660604" required placeholder="Enter your email" class="flex-1 px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#00D4FF]/50 focus:ring-1 focus:ring-[#00D4FF]/30 transition-all text-base">
+          <button type="submit" id="waitlist-btn" class="px-8 py-3.5 rounded-xl font-semibold text-white text-base transition-all duration-300" style="background: linear-gradient(135deg, #00D4FF 0%, #8B5CF6 100%);">Join Waitlist</button>
+        </div>
+      </form>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <p id="waitlist-success" class="hidden text-[#00D4FF] font-medium mt-2 text-sm">✓ You're on the list. We'll notify you at launch.</p>
+      <p class="text-gray-600 text-xs mt-3">No spam. Just a launch notification on March 25.</p>
+      <p class="mt-8 text-gray-400">For information contact: <a href="mailto:info@humansidetechnologies.com" class="text-[#00D4FF] hover:underline">info@humansidetechnologies.com</a></p>
     </div>
   </section>
 
@@ -203,5 +186,14 @@
       <p class="mt-3">Built in conversation with Claude &amp; Grok • <a href="mailto:info@humansidetechnologies.com" class="hover:text-white">info@humansidetechnologies.com</a></p>
     </div>
   </footer>
+
+  <script>
+    function handleWaitlist() {
+      setTimeout(() => {
+        document.getElementById('waitlist-form').style.display = 'none';
+        document.getElementById('waitlist-success').classList.remove('hidden');
+      }, 500);
+    }
+  </script>
 </body>
 </html>
