@@ -77,127 +77,121 @@
         }
         .nav-links a:hover { color: var(--ember-orange); }
 
-        /* ── HERO ── */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(139,105,20,0.06) 0%, transparent 50%, rgba(255,107,0,0.04) 100%);
-            pointer-events: none;
-        }
-        .hero-content {
-            max-width: 1100px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .hero-cover {
-            position: relative;
-        }
-        .hero-covers-wrap {
-            display: flex;
-            gap: 1.2rem;
-            align-items: flex-start;
-            position: relative;
-        }
-        .hero-cover img.cover-front {
-            width: 55%;
-            max-width: 360px;
-            border-radius: 4px;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
-            position: relative;
-            z-index: 2;
-        }
-        .hero-cover img.cover-back {
-            width: 55%;
-            max-width: 290px;
-            border-radius: 4px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
-            margin-top: 2rem;
-        }
-        .badge-nr1 {
-            position: absolute;
-            top: -14px;
-            right: -14px;
-            z-index: 3;
-            background: var(--ember-orange);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 0.5rem 0.9rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 20px rgba(255,107,0,0.4);
-            line-height: 1.3;
-            text-align: center;
-        }
-        .hero-text h1 {
-            font-size: 4.2rem;
-            font-weight: 700;
-            color: var(--ember-orange);
-            letter-spacing: -0.03em;
-            line-height: 1.0;
-            margin-bottom: 0.6rem;
-        }
-        .hero-subtitle {
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--ember-gold);
-            margin-bottom: 1.8rem;
-        }
-        .hero-tagline {
-            font-size: 1.55rem;
-            font-style: italic;
-            color: var(--text-primary);
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        .hero-desc {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 2.4rem;
-        }
-        .btn-amazon {
-            display: inline-block;
-            background: var(--text-bright);
-            color: var(--bg-deep);
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 1rem 2.6rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: all 0.3s;
-            letter-spacing: 0.01em;
-        }
-        .btn-amazon:hover {
-            background: var(--ember-orange);
-            color: white;
-            box-shadow: 0 6px 30px rgba(255,107,0,0.35);
-        }
-        .hero-formats {
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 0.8rem;
-            letter-spacing: 0.03em;
-        }
+/* ── HERO ── */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139,105,20,0.06) 0%, transparent 50%, rgba(255,107,0,0.04) 100%);
+    pointer-events: none;
+}
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.hero-cover-left img {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+}
+.hero-cover-right img {
+    width: 100%;
+    max-width: 290px;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+}
+.hero-text {
+    text-align: center;
+}
+.hero-text h1 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: var(--ember-orange);
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+    margin-bottom: 0.6rem;
+}
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ember-gold);
+    margin-bottom: 1.8rem;
+}
+.hero-tagline {
+    font-size: 1.55rem;
+    font-style: italic;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2.4rem;
+}
+.btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.btn-amazon {
+    display: inline-block;
+    background: var(--text-bright);
+    color: var(--bg-deep);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 1rem 2.6rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+    letter-spacing: 0.01em;
+}
+.btn-amazon:hover {
+    background: var(--ember-orange);
+    color: white;
+    box-shadow: 0 6px 30px rgba(255,107,0,0.35);
+}
+.badge-nr1 {
+    background: var(--ember-orange);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(255,107,0,0.4);
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+}
+.hero-formats {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.8rem;
+    letter-spacing: 0.03em;
+}
 
         /* ── DIVIDER QUOTE ── */
         .quote-divider {
@@ -418,21 +412,21 @@
         }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2.5rem;
-            }
-            .hero-cover { order: -1; }
-            .hero-covers-wrap { justify-content: center; }
-            .hero-cover img.cover-front { max-width: 200px; }
-            .hero-cover img.cover-back { max-width: 160px; }
-            .badge-nr1 { top: -14px; right: 0; }
-            .hero-text h1 { font-size: 3rem; }
-            .hero-tagline { font-size: 1.3rem; }
-            .disc-grid { grid-template-columns: 1fr; max-width: 400px; }
-            .quote-divider blockquote { font-size: 1.35rem; }
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-cover-left { order: 1; }
+    .hero-cover-left img { max-width: 250px; margin: 0 auto; display: block; }
+    .hero-text { order: 2; }
+    .hero-text h1 { font-size: 3rem; }
+    .hero-tagline { font-size: 1.3rem; }
+    .hero-cover-right { order: 3; }
+    .hero-cover-right img { max-width: 220px; margin: 0 auto; display: block; }
+    .btn-row { flex-direction: column; gap: 0.8rem; }
+}
         }
     </style>
 </head>
@@ -454,32 +448,31 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-cover">
-                <div class="hero-covers-wrap">
-                    <img src="cover-front.jpg" alt="The Ember — Front Cover" class="cover-front">
-                    <img src="cover-back.jpg" alt="The Ember — Back Cover" class="cover-back">
-                    <div class="badge-nr1">#1 New Release<br>Prehistory</div>
-                </div>
-            </div>
-            <div class="hero-text">
-                <h1>THE EMBER</h1>
-                <div class="hero-subtitle">A Novel Grounded in the Latest Science</div>
-                <p class="hero-tagline">
-                    How Ancient Minds Encoded Knowledge to Survive the End of Their World
-                </p>
-                <p class="hero-desc">
-                    Eleven thousand years ago, in southern Turkey, people who had survived the worst catastrophe in human memory made a decision that would define our species. They encoded everything they knew&nbsp;.&nbsp;.&nbsp;. mathematics, astronomy, the precession patterns of a 25,920-year cosmic cycle&nbsp;.&nbsp;.&nbsp;. into stone. <em>Then they buried it.</em> Not because they were finished. Because they knew what was coming, and stone was the only medium that would survive.
-                </p>
-                <a href="https://www.amazon.com/dp/B0GSCXLZMM" target="_blank" class="btn-amazon">
-                    Buy on Amazon
-                </a>
-                <div class="hero-formats">Kindle · Paperback · Hardcover</div>
-            </div>
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-cover-left">
+            <img src="cover-front.jpg" alt="The Ember — Front Cover">
         </div>
-    </section>
+        <div class="hero-text">
+            <h1>THE EMBER</h1>
+            <div class="hero-subtitle">A Novel Grounded in the Latest Science</div>
+            <p class="hero-tagline">
+                How Ancient Minds Encoded Knowledge to Survive the End of Their World
+            </p>
+            <p class="hero-desc">
+                Eleven thousand years ago, in southern Turkey, people who had survived the worst catastrophe in human memory made a decision that would define our species. They encoded everything they knew&nbsp;.&nbsp;.&nbsp;. mathematics, astronomy, the precession patterns of a 25,920-year cosmic cycle&nbsp;.&nbsp;.&nbsp;. into stone. <em>Then they buried it.</em> Not because they were finished. Because they knew what was coming, and stone was the only medium that would survive.
+            </p>
+            <div class="btn-row">
+                <a href="https://www.amazon.com/dp/B0GSCXLZMM" target="_blank" class="btn-amazon">Buy on Amazon</a>
+                <div class="badge-nr1">#1 New Release<br>Prehistory</div>
+            </div>
+            <div class="hero-formats">Kindle · Paperback · Hardcover</div>
+        </div>
+        <div class="hero-cover-right">
+            <img src="cover-back.jpg" alt="The Ember — Back Cover">
+        </div>
+    </div>
+</section>
 
     <!-- QUOTE DIVIDER -->
     <section class="quote-divider">
@@ -493,7 +486,7 @@
     <section class="about-section" id="about">
         <h2>About the Book</h2>
         <p>
-            <em>The Ember</em> traces the deep history of knowledge preservation — from Paleolithic symbol systems 45,000 years old, through the emergence of hybrid human intelligence, to the monumental encoding project at Göbekli Tepe and its transmission into Sumerian mathematics, Hindu cosmology, and the foundations of civilization.
+            <em>The Ember</em> traces the deep history of knowledge preservation . . . from Paleolithic symbol systems 45,000 years old, through the emergence of hybrid human intelligence, to the monumental encoding project at Göbekli Tepe and its transmission into Sumerian mathematics, Hindu cosmology, and the foundations of civilization.
         </p>
         <p>
             Grounded in the latest archaeology, genetics, and archaeoastronomy, it proposes a five-vector framework for understanding how civilizations anticipate and survive catastrophic collapse&nbsp;.&nbsp;.&nbsp;. and why the question matters now more than ever.
