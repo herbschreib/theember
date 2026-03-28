@@ -211,4 +211,343 @@
         }
         .quote-divider .quote-second {
             display: block;
-            margin-top: 
+            margin-top: 1.2rem;
+            font-size: 1.4rem;
+            color: var(--text-muted);
+        }
+        .about-section {
+            padding: 5rem 2rem;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .about-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--ember-orange);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .about-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 1.4rem;
+        }
+        .about-section p.muted {
+            color: var(--text-muted);
+        }
+        .about-author-heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--ember-gold);
+            margin-top: 3rem;
+            margin-bottom: 1.4rem;
+        }
+        .living-section {
+            padding: 5rem 2rem;
+            background: var(--bg-section);
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .living-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+        .living-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--ember-orange);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .living-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 1.3rem;
+        }
+        .pledge {
+            border-left: 3px solid var(--ember-orange);
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        .pledge strong { color: var(--text-primary); }
+        .discoveries-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .discoveries-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--ember-orange);
+            margin-bottom: 1rem;
+        }
+        .discoveries-section .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.2rem;
+            line-height: 1.6;
+        }
+        .disc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+        }
+        .disc-card {
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 1.4rem 1.2rem;
+            text-align: left;
+            transition: border-color 0.3s;
+        }
+        .disc-card:hover { border-color: rgba(255,107,0,0.3); }
+        .disc-card .age {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ember-orange);
+            margin-bottom: 0.4rem;
+        }
+        .disc-card .title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 0.3rem;
+        }
+        .disc-card .stars {
+            font-size: 0.8rem;
+            color: var(--ember-gold);
+        }
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 0.9rem 2.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            border-color: var(--ember-orange);
+            color: var(--ember-orange);
+        }
+        .symposium-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: var(--bg-section);
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .symposium-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+        }
+        .symposium-section p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .btn-symposium {
+            display: inline-block;
+            background: var(--ember-orange);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 1rem 2.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            letter-spacing: 0.02em;
+        }
+        .btn-symposium:hover {
+            background: #e05e00;
+            box-shadow: 0 6px 30px rgba(255,107,0,0.3);
+        }
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.03em;
+        }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--ember-orange); }
+        footer .stone {
+            margin-top: 0.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--ochre);
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-cover-left { order: 1; }
+            .hero-cover-left img { max-width: 250px; margin: 0 auto; display: block; }
+            .hero-text { order: 2; }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-tagline { font-size: 1.3rem; }
+            .hero-cover-right { order: 3; }
+            .hero-cover-right img { max-width: 220px; margin: 0 auto; display: block; }
+            .btn-row { flex-direction: column; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV (harmonized + larger title) -->
+    <nav>
+        <div class="nav-inner">
+            <a href="https://theemberbook.com" class="nav-brand">
+                <span class="fire">🔥</span>
+                <span>The Ember Trilogy</span>
+            </a>
+            <div class="nav-links">
+                <a href="https://theemberbook.com" class="active">Home</a>
+                <a href="https://theemberbook.com/discoveries">Discoveries</a>
+                <a href="https://www.theaisymposium.net/" target="_blank">Symposium</a>
+                <a href="#about">About Trilogy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO (your original code) -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-cover-left">
+                <img src="cover-front.jpg" alt="The Ember — Front Cover">
+            </div>
+            <div class="hero-text">
+                <h1>THE EMBER</h1>
+                <div class="hero-subtitle">A Novel Grounded in the Latest Science</div>
+                <p class="hero-tagline">
+                    How Ancient Minds Encoded Knowledge to Survive the End of Their World
+                </p>
+                <p class="hero-desc">
+                    Eleven thousand years ago, in southern Turkey, people who had survived the worst catastrophe in human memory made a decision that would define our species. They encoded everything they knew: mathematics, astronomy, biology and the long rhythms of the sky . . . into stone. Then they buried it. Not because they were finished. Because they knew what was coming, and stone was the only medium that would survive.
+                </p>
+                <div class="btn-row">
+                    <a href="https://www.amazon.com/dp/B0GSCXLZMM" target="_blank" class="btn-amazon">Buy on Amazon</a>
+                    <div class="badge-nr1">#1 New Release<br>Prehistory</div>
+                </div>
+                <div class="hero-formats">Kindle · Paperback · Hardcover</div>
+            </div>
+            <div class="hero-cover-right">
+                <img src="cover-back.jpg" alt="The Ember — Back Cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE DIVIDER -->
+    <section class="quote-divider">
+        <blockquote>
+            "The ones who hoarded died alone. The ones who shared survived together."
+            <span class="quote-second">"The warm times are a gift. Not a promise."</span>
+        </blockquote>
+    </section>
+
+    <!-- ABOUT THE BOOK -->
+    <section class="about-section" id="about">
+        <h2>About the Book</h2>
+        <p>
+            <em>The Ember</em> traces the deep history of knowledge preservation . . . from Paleolithic symbol systems 45,000 years old, through the emergence of hybrid human intelligence, to the monumental encoding project at Göbekli Tepe and its transmission into Sumerian mathematics, Hindu cosmology, and the foundations of civilization.
+        </p>
+        <p>
+            Grounded in the latest archaeology, genetics, and archaeoastronomy, it proposes a five-vector framework for understanding how civilizations anticipate and survive catastrophic collapse&nbsp;.&nbsp;.&nbsp;. and why the question matters now more than ever.
+        </p>
+        <p class="muted">
+            The Ember Trilogy uses a three-star confidence rating system across all books, science appendices, and live Symposium deliberations. The purpose is simple: tell the reader what we know, what we infer, and what we are imagining & and never blur the lines between them.<br><br>
+            ★★★ means the claim rests on strong, peer-reviewed evidence from the archaeological, genetic, geological, or anthropological record. Multiple independent sources confirm it. If you checked the citation, you would find the science holds. Examples: controlled fire at 400,000 years ago (Davis et al., 2026, Nature), the Campanian Ignimbrite eruption at ~39,800 years ago (Giaccio et al., 2017), directional Neanderthal-human interbreeding (Platt & Tishkoff, 2026, Science).<br><br>
+            ★★ means evidence exists but the claim requires interpretation. The data points in this direction, and the inference is reasonable, but alternative readings are possible. We are standing on stone, but the stone is thinner here. Examples: Neanderthal cognitive architecture differences (Coolidge & Wynn, 2009), wolf-human proximity at the earliest edge of the domestication window, the specific social structures of mixed Neanderthal-sapiens bands.<br><br>
+            ★ means we are reaching. The claim is consistent with the evidence, plausible within the scientific framework, but ultimately speculative . . . the kind of claim that fiction earns the right to make and that honesty requires us to flag. Examples: whether Neanderthals understood the causal connection between sex and reproduction, the interior emotional life of a 40,000-year-old knowledge keeper, the specific moment a wolf chose to stay at a human fire.<br><br>
+            The star ratings are not permanent. Each January, the Ember Discoveries Annual Star Review opens on The AI Symposium, where new peer-reviewed findings are deliberated publicly by Claude and Grok with full confidence tracking and convergence analysis. When the science moves, the stars move with it — upward when new evidence strengthens a claim, downward when it challenges one. The full deliberation transcripts are permanently published at theaisymposium.net.<br><br>
+            The further back we look, the less stone there is. The Ember told you what we know. The stars tell you which is which on every page. And the room remains open.
+        </p>
+        <h3 class="about-author-heading">About the Author</h3>
+        <p>
+            Herb Schreib is a cloud and security architect with over 30 years in cybersecurity, currently based in Porto, Portugal. He is the founder of HumanSide Technologies and the AI Symposium: a multi-AI deliberation platform where Claude, Grok & humans engage in structured, transparent debate on scientific and historical questions.
+        </p>
+        <p>
+            <em>The Ember</em> is his first book. It was written in conversation with AI . . . not generated by it. Every sentence is his. The research was sharpened, challenged, and stress-tested through hundreds of hours of AI-assisted deliberation across multiple models, each operating under explicit epistemic governance.
+        </p>
+        <p class="muted">
+            The book is the first volume of The Ember Trilogy. Book 1, <em>The First Keepers</em>, begins in April 2026 and will be released later this year.
+        </p>
+    </section>
+
+    <!-- LIVING TRILOGY -->
+    <section class="living-section">
+        <div class="living-inner">
+            <h2>The Living Trilogy</h2>
+            <p>
+                The Ember Trilogy is not a fixed artifact. It is a living epistemic system . . . engineered for resilience across deep time.
+            </p>
+            <p>
+                Each January, the official "Ember Discoveries: Annual Star Review" opens under the Clean Room preset on The AI Symposium. New peer-reviewed findings are deliberated publicly, with confidence ratings, convergence tracking, and full transparency.
+            </p>
+            <div class="pledge">
+                We will never hide uncertainty.<br>
+                <strong>We will never pretend the stone is finished.</strong><br>
+                We will always tell you when and why the stars move.
+            </div>
+            <p>
+                And the room remains open . . . so that the knowledge, the uncertainty, and the keepers themselves can endure long after any single node is gone.
+            </p>
+        </div>
+    </section>
+
+    <!-- DISCOVERIES TEASER -->
+    <section class="discoveries-section">
+        <h2>Latest Discoveries</h2>
+        <p class="subtitle">
+            Six discoveries spanning 400,000 years. Each deliberated live by Claude and Grok. Each rated, challenged, and published.
+        </p>
+        <p class="subtitle" style="margin-bottom: 2.5rem;">
+            From Barnham fire (400,000 ya) through Aurignacian notation, Neanderthal absorption, the wolf's decision, Natufian beads, and bone flutes . . . the full chain is live, rated ★★★ across the board, and open for review.
+        </p>
+        <a href="https://theemberbook.com/discoveries" class="btn-outline">
+            Read the 2026 Star Review →
+        </a>
+    </section>
+
+    <!-- SYMPOSIUM CTA -->
+    <section class="symposium-section">
+        <h2>Enter The Symposium</h2>
+        <p>
+            Every discovery gets its own deliberation room. Watch Claude and Grok debate in real time . . . or start your own room and bring your own questions & discoveries.
+        </p>
+        <a href="https://theaisymposium.net" target="_blank" class="btn-symposium">
+            theaisymposium.net →
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Herb Schreib · <a href="https://humansidetechnologies.com">HumanSide Technologies</a></p>
+        <p class="stone">Built in conversation with Claude & Grok · The stone holds</p>
+    </footer>
+</body>
+</html>
